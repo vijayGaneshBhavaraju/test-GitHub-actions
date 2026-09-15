@@ -1,0 +1,17 @@
+name: Hello World
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  hello:
+    runs-on: windows-latest
+
+    steps:
+      - name: Say Hello
+        shell: pwsh
+        run: |
+          Write-Host "Hello World!"
+          Write-Host "This is my first GitHub Actions pipeline."
